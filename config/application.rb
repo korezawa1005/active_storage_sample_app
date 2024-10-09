@@ -38,5 +38,11 @@ module ActiveStorageSampleApp
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    config.i18n.default_locale = :ja
+    config.active_record.default_timezone = :local
+    config.time_zone = "Asia/Tokyo"
+
+    config.active_storage.variant_processor = :mini_magick
   end
 end

@@ -1,0 +1,13 @@
+<%= render "layouts/error_messages", object: @post %>
+<%= form_with model: @post do |form| %>
+  <p>
+    <%= form.label :title %>
+    <%= form.text_field :title, required: true %>
+  </p>
+  <p>
+    <%= form.file_field :avatar, accept: "image/png,image/jpeg,image/gif" %>
+  </p>
+  <div>
+    <%= form.submit "送信" %>
+  </div>
+<% end %>
